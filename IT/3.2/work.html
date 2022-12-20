@@ -1,0 +1,33 @@
+ <!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Лабораторная работа №3.2</title>
+		<style>
+			body {
+				margin: 0;
+				margin-top: 0;
+			}
+			h1 {
+				margin-top: 0;
+				background: #0000FF;
+				padding: 10px;
+				color: #FFFFFF;
+			}
+		</style>
+		<H1>Лабораторная работа №3.2</H1>
+		<script src="script.js"></script>
+	</head>
+
+	<body>	
+		<form onload = "onload_form();">
+			<div class = "divRezult" id = "d1"></div>
+			Введите имя: 
+			<input type = "text" id = "text1">
+			<br> <br>
+			<input type = "button" value = "Зарегестрироваться" onclick = "c_regEdit()">
+
+			<input type = "button" value = "Обнулить посещения" onClick = "deleteVisit()">
+		</form>
+	</body>
+</html> 
