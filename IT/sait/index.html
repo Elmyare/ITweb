@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script src="app.js"></script>
+	<link rel="stylesheet" type="text/css" href="main.css">
+	<script type="text/javascript" src="app.js"></script>
+	<title>Course</title>
+</head>
+<body>
+
+<header class="header">
+	<img src="img/headerimg3.png" class="himg">
+	<div class="basket">
+		<input type="checkbox" id="basket-info1" class="info-switch">
+		<img src="img/basket.png" class="basketlogo">
+		<label for="basket-info1" class="basket-text">Моя корзина</label>
+		<div class="basket-info">
+			<p>Товаров: <b id="count">0</b></p>
+			<p>На сумму: <b id="price">0</b></p>
+			<div>
+				<a href="scam.html" target="_blank">Оформить</a>
+				<input class="btn2" type="button" value="Очистить" onclick="refresh()">
+			</div>
+		</div>
+	</div>
+</header>
+
+
+
+<div class="body-top" id="main">	
+		<div class="op1-block">
+		<img src="img/op1.jpg" class="op1">
+			<div class="op1-name">
+				DEXP Спутник 1
+			</div>
+			<div class="op1-val">
+				<b>999 ₽</b>
+			</div>
+			<div class="op1-img" onclick="AddToCartop1(999)">
+			</div>
+	</div>
+	<div class="op2-block">
+		<img src="img/op2.jpg" class="op2">
+			<div class="op2-name">
+				Aceline G1
+			</div>
+			<div class="op2-val">
+				<b>1 699 ₽</b>
+			</div>
+			<div class="op2-img" onclick="AddToCartop2(1699)">
+			</div>
+	</div>
+	<div class="op3-block">
+		<img src="img/op3.jpg" class="op3">
+			<div class="op3-name">
+				Midland G5 C1357.02
+			</div>
+			<div class="op3-val">
+				<b>1 750 ₽</b>
+			</div>
+			<div class="op3-img" onclick="AddToCartop3(1750)">
+			</div>
+	</div>
+	<div class="op4-block">
+		<img src="img/op4.jpg" class="op4">
+			<div class="op4-name">
+				Midland G5 black
+			</div>
+			<div class="op4-val">
+				<b>1 999 ₽</b>
+			</div>
+			<div class="op4-img" onclick="AddToCartop4(1999)">
+			</div>
+	</div>
+
+<div class="GC1-block">
+		<img src="img/GC1.jpg" class="GC1">
+			<div class="GC1-name">
+				Canon EOS M200 Kit 15-45mm IS STM
+			</div>
+			<div class="GC1-val">
+				<b>44 999 ₽</b>
+			</div>
+			<div class="GC1-img" onclick="AddToCartGC1(44999)">
+			</div>
+	</div>
+	<div class="GC2-block">
+		<img src="img/GC2.jpg" class="GC2">
+			<div class="GC2-name">
+				Canon EOS M50 Mark II Kit 15-45mm IS STM
+			</div>
+			<div class="GC2-val">
+				<b>59 999 ₽</b>
+			</div>
+			<div class="GC2-img" onclick="AddToCartGC2(59999)">
+			</div>
+	</div>
+	<div class="GC3-block">
+		<img src="img/GC3.jpg" class="GC3">
+			<div class="GC3-name">
+				Беззеркальная камера Canon EOS RP Body
+			</div>
+			<div class="GC3-val">
+				<b>79 999 ₽</b>
+			</div>
+			<div class="GC3-img" onclick="AddToCartGC3(79999)">
+			</div>
+	</div>
+	<div class="GC4-block">
+		<img src="img/GC4.jpg" class="GC4">
+			<div class="GC4-name">
+				Nikon Z 50 Kit 16-50mm DX VR
+			</div>
+			<div class="GC4-val">
+				<b>79 999 ₽</b>
+			</div>
+			<div class="GC4-img" onclick="AddToCartGC4(79999)">
+			</div>
+	</div>
+
+<div class="MB1-block">
+		<img src="img/MB1.jpg" class="MB1">
+			<div class="MB1-name">
+				Aceline S-20
+			</div>
+			<div class="MB1-val">
+				<b>1 599 ₽</b>
+			</div>
+			<div class="MB1-img" onclick="AddToCartMB1(1599)">
+			</div>
+	</div>
+	<div class="MB2-block">
+		<img src="img/MB2.jpg" class="MB2">
+			<div class="MB2-name">
+				Aceline S-60
+			</div>
+			<div class="MB2-val">
+				<b>2 499 ₽</b>
+			</div>
+			<div class="MB2-img" onclick="AddToCartMB2(2499)">
+			</div>
+	</div>
+	<div class="MB3-block">
+		<img src="img/MB3.jpg" class="MB3">
+			<div class="MB3-name">
+				SJCAM SJ4000
+			</div>
+			<div class="MB3-val">
+				<b>3 099 ₽</b>
+			</div>
+			<div class="MB3-img" onclick="AddToCartMB3(3099)">
+			</div>
+	</div>
+	<div class="MB4-block">
+		<img src="img/MB4.jpg" class="MB4">
+			<div class="MB4-name">
+				SJCAM SJ4000 Air
+			</div>
+			<div class="MB4-val">
+				<b>3 299 ₽</b>
+			</div>
+			<div class="MB4-img" onclick="AddToCartMB4(3299)">
+			</div>
+	</div>
+	
+<div class="PROC1-block">
+		<img src="img/PROC1.jpg" class="PROC1">
+			<div class="PROC1-name">
+				INOI A22 Lite 8 ГБ
+			</div>
+			<div class="PROC1-val">
+				<b>3 299 ₽</b>
+			</div>
+			<div class="PROC1-img" onclick="AddToCartPROC1(3299)">
+			</div>
+	</div>
+	<div class="PROC2-block">
+		<img src="img/PROC2.jpg" class="PROC2">
+			<div class="PROC2-name">
+				Itel A17 16 ГБ
+			</div>
+			<div class="PROC2-val">
+				<b>3 299 ₽</b>
+			</div>
+			<div class="PROC2-img" onclick="AddToCartPROC2(3299)">
+			</div>
+	</div>
+	<div class="PROC3-block">
+		<img src="img/PROC3.jpg" class="PROC3">
+			<div class="PROC3-name">
+				Itel A25 16 ГБ
+			</div>
+			<div class="PROC3-val">
+				<b>3 499 ₽</b>
+			</div>
+			<div class="PROC3-img" onclick="AddToCartPROC3(3499)">
+			</div>
+	</div>
+	<div class="PROC4-block">
+		<img src="img/PROC4.jpg" class="PROC4">
+			<div class="PROC4-name">
+				Itel A25 16 ГБ
+			</div>
+			<div class="PROC4-val">
+				<b>3 499 ₽</b>
+			</div>
+			<div class="PROC4-img" onclick="AddToCartPROC4(3499)">
+			</div>
+	</div>
+</div>
+
+
+
+
+
+
+
+<div id="GraphicsCards" style="display: none;">
+<div class="GC1-block">
+		<img src="img/GC1.jpg" class="GC1">
+			<div class="GC1-name">
+				Canon EOS M200 Kit 15-45mm IS STM
+			</div>
+			<div class="GC1-val">
+				<b>44 999 ₽</b>
+			</div>
+			<div class="GC1-img" onclick="AddToCartGC1(44999)">
+			</div>
+	</div>
+	<div class="GC2-block">
+		<img src="img/GC2.jpg" class="GC2">
+			<div class="GC2-name">
+				Canon EOS M50 Mark II Kit 15-45mm IS STM
+			</div>
+			<div class="GC2-val">
+				<b>59 999 ₽</b>
+			</div>
+			<div class="GC2-img" onclick="AddToCartGC2(59999)">
+			</div>
+	</div>
+	<div class="GC3-block">
+		<img src="img/GC3.jpg" class="GC3">
+			<div class="GC3-name">
+				Беззеркальная камера Canon EOS RP Body
+			</div>
+			<div class="GC3-val">
+				<b>79 999 ₽</b>
+			</div>
+			<div class="GC3-img" onclick="AddToCartGC3(79999)">
+			</div>
+	</div>
+	<div class="GC4-block">
+		<img src="img/GC4.jpg" class="GC4">
+			<div class="GC4-name">
+				Nikon Z 50 Kit 16-50mm DX VR
+			</div>
+			<div class="GC4-val">
+				<b>79 999 ₽</b>
+			</div>
+			<div class="GC4-img" onclick="AddToCartGC4(79999)">
+			</div>
+	</div>
+	
+</div>
+
+
+
+
+
+
+<div id="Motherboards" style="display: none;">
+<div class="MB1-block">
+		<img src="img/MB1.jpg" class="MB1">
+			<div class="MB1-name">
+				Aceline S-20
+			</div>
+			<div class="MB1-val">
+				<b>1 599 ₽</b>
+			</div>
+			<div class="MB1-img" onclick="AddToCartMB1(1599)">
+			</div>
+	</div>
+	<div class="MB2-block">
+		<img src="img/MB2.jpg" class="MB2">
+			<div class="MB2-name">
+				Aceline S-60
+			</div>
+			<div class="MB2-val">
+				<b>2 499 ₽</b>
+			</div>
+			<div class="MB2-img" onclick="AddToCartMB2(2499)">
+			</div>
+	</div>
+	<div class="MB3-block">
+		<img src="img/MB3.jpg" class="MB3">
+			<div class="MB3-name">
+				SJCAM SJ4000
+			</div>
+			<div class="MB3-val">
+				<b>3 099 ₽</b>
+			</div>
+			<div class="MB3-img" onclick="AddToCartMB3(3099)">
+			</div>
+	</div>
+	<div class="MB4-block">
+		<img src="img/MB4.jpg" class="MB4">
+			<div class="MB4-name">
+				SJCAM SJ4000 Air
+			</div>
+			<div class="MB4-val">
+				<b>3 299 ₽</b>
+			</div>
+			<div class="MB4-img" onclick="AddToCartMB4(3299)">
+			</div>
+	</div>
+</div>
+
+
+
+<div id="Processors" style="display: none;">
+<div class="PROC1-block">
+		<img src="img/PROC1.jpg" class="PROC1">
+			<div class="PROC1-name">
+				INOI A22 Lite 8 ГБ
+			</div>
+			<div class="PROC1-val">
+				<b>3 299 ₽</b>
+			</div>
+			<div class="PROC1-img" onclick="AddToCartPROC1(3299)">
+			</div>
+	</div>
+	<div class="PROC2-block">
+		<img src="img/PROC2.jpg" class="PROC2">
+			<div class="PROC2-name">
+				Itel A17 16 ГБ
+			</div>
+			<div class="PROC2-val">
+				<b>3 299 ₽</b>
+			</div>
+			<div class="PROC2-img" onclick="AddToCartPROC2(3299)">
+			</div>
+	</div>
+	<div class="PROC3-block">
+		<img src="img/PROC3.jpg" class="PROC3">
+			<div class="PROC3-name">
+				Itel A25 16 ГБ
+			</div>
+			<div class="PROC3-val">
+				<b>3 499 ₽</b>
+			</div>
+			<div class="PROC3-img" onclick="AddToCartPROC3(3499)">
+			</div>
+	</div>
+	<div class="PROC4-block">
+		<img src="img/PROC4.jpg" class="PROC4">
+			<div class="PROC4-name">
+				Itel A25 16 ГБ
+			</div>
+			<div class="PROC4-val">
+				<b>3 499 ₽</b>
+			</div>
+			<div class="PROC4-img" onclick="AddToCartPROC4(3499)">
+			</div>
+	</div>
+	
+</div>
+
+<div id="RAM" style="display: none;">
+	<div class="op1-block">
+		<img src="img/op1.jpg" class="op1">
+			<div class="op1-name">
+				DEXP Спутник 1
+			</div>
+			<div class="op1-val">
+				<b>999 ₽</b>
+			</div>
+			<div class="op1-img" onclick="AddToCartop1(999)">
+			</div>
+	</div>
+	<div class="op2-block">
+		<img src="img/op2.jpg" class="op2">
+			<div class="op2-name">
+				Aceline G1
+			</div>
+			<div class="op2-val">
+				<b>1 699 ₽</b>
+			</div>
+			<div class="op2-img" onclick="AddToCartop2(1699)">
+			</div>
+	</div>
+	<div class="op3-block">
+		<img src="img/op3.jpg" class="op3">
+			<div class="op3-name">
+				Midland G5 C1357.02
+			</div>
+			<div class="op3-val">
+				<b>1 750 ₽</b>
+			</div>
+			<div class="op3-img" onclick="AddToCartop3(1750)">
+			</div>
+	</div>
+	<div class="op4-block">
+		<img src="img/op4.jpg" class="op4">
+			<div class="op4-name">
+				Midland G5 black
+			</div>
+			<div class="op4-val">
+				<b>1 999 ₽</b>
+			</div>
+			<div class="op4-img" onclick="AddToCartop4(1999)">
+			</div>
+	</div>
+</div>
+
+	<div id="sidebar">
+		<div class="btn" onclick="openMenu()">
+				<span></span>
+				<span></span>
+				<span></span>
+		</div>
+		<ul>
+			<li style="color: blanchedalmond;">КАТАЛОГ</li>
+			<li><div class="OpMain" onclick="OpenMain();openMenu();">Главная</div></li>
+			<li><div class="OpGr" onclick="OpenGr();openMenu();">Фотоаппараты</div></li>
+			<li><div class="OpMoth" onclick="OpenMotherboards();openMenu();">Экшн-камеры</div></li>
+			<li><div class="OpProc" onclick="OpenProcessors();openMenu();">Смартфоны</div></li>
+			<li><div class="OpRAM" onclick="OpenRAM();openMenu();">Радиостанции</div></li>
+		</ul>
+	</div>
+
+<footer class="footer">
+	<div class="footer-info">
+		<div class="footer-text">
+			<p class="contacts">КОНТАКТЫ: 8-800-800-80-80 (c 09:00 до 19:00)</p>
+		</div>
+		<div class="images">
+			<a href="https://vk.com" class="vk"><img src="img/vklogo.png" class="vklogo"></a>
+			<a href="https://youtube.com" class="yt"><img src="img/ytlogo.png" class="ytlogo"></a>
+		</div>
+	</div>
+</footer>
+
+</body>
+</html>

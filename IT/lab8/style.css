@@ -1,0 +1,62 @@
+.button {
+    padding: 16px;
+}
+
+.dropdown1 {
+    background-color: lime;
+    position: absolute;
+    display: none;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    border-style: solid;
+    z-index: 50px;
+}
+
+.dropdown2 {
+    background-color: lime;
+    position: absolute;
+    display: none;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    border-style: solid;
+    z-index: 50px;
+}
+
+.dropdown3 {
+    background-color: lime;
+    position: absolute;
+    display: none;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    border-style: solid;
+    z-index: 50px;
+}
+
+.dropdown4 {
+    background-color: lime;
+    position: absolute;
+    display: none;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    border-style: solid;
+    z-index: 50px;
+}
+
+table {
+    width: 100%;
+    background-color: lime;
+    height: 50px;
+}
+
+td {
+    width: 25%;
+}
+
+a {
+    color: black;
+    padding: 15px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+a:hover {
+    color: limegreen;
+    background-color: seagreen;
+    text-decoration: underline;
+}

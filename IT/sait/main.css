@@ -1,0 +1,1286 @@
+*{
+	padding: 0;
+	margin: 0;
+	font-family: sans-serif;
+}
+
+body {
+width: 100%;
+margin:auto;
+}
+
+#sidebar{
+	position: fixed;
+	margin-left: -10px;
+	margin-top: -60px;
+	width: 250px;
+	height: 310px;
+	background: #162EAE;
+	top: 55px;
+	border-radius: 10px;
+	left: -250px;
+	z-index: 100;
+	transition: all 300ms;
+}
+
+#sidebar.active{
+	left: 30px;
+	top: 150px;
+}
+
+#sidebar ul li:first-child{
+	color:  white;
+	font-size: 2em;
+	list-style: none;
+	padding: 25px 10px 10px 10px;
+}
+
+#sidebar ul li:not(first-child){
+	width: 90%;
+	margin-left: 10%;
+	font-size: 1.2em;
+	list-style: none;
+	padding: 15px 10px 10px 10px;
+}
+
+#sidebar ul li a {
+	color: black;
+	text-decoration: none;
+}
+
+#sidebar ul li a:hover { color: lightblue; }
+
+#sidebar .btn{
+	position: absolute;
+	left:  270px;
+	top: 20px;
+	background: lightblue;
+	padding: 10px;
+	border-radius: 12px;
+	cursor: pointer;
+}
+
+#sidebar .btn:hover {background: #556270}
+#sidebar .btn:hover span{background: #fafafa}
+
+
+#sidebar .btn span{
+	display: block;
+	width: 25px;
+	height: 4px;
+	background-color: #666;
+	margin: 4px 0;
+}
+
+
+.header {
+	width: 100%;
+	height: 200px;
+	position: fixed;
+	background: #162EAE;
+	padding: 0 15px;
+	margin: 0 auto;
+	z-index: 100;
+	box-shadow: 0 5px 25px rgba(0, 0, 0, 0.15);
+	box-shadow: 0 5px 25px rgba(0, 0, 0, 0.15);
+	display: flex;
+	flex-flow: nowrap;
+	left: 100;
+    top: 0;
+}
+
+.himg {
+	margin-left: 50px;
+	margin-top: -5px;
+	width: 530px;
+	height: 102%;
+}
+
+.header-text {
+	display: flex;
+	flex-direction: column;
+	margin-left: 20px;
+	margin-top: 20px;
+	text-transform: uppercase;
+	font-weight: bold;
+	font-size: 2rem;
+}
+
+.footer {
+
+	z-index: 100;
+	height: 35px;
+    bottom: 0;
+	width: 100%;
+    background-color: #162EAE;
+    display: flex;
+    flex-direction: row;
+
+}
+
+.footer-text {
+	position: relative;
+	width: 400px;
+	left: 10px;
+	margin-top: 7px;
+	color: black;
+	margin-left: 1%;
+}
+
+.footer-info {
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+}
+
+#main {
+	margin-right: 10px;
+	margin-left: 50px;
+	margin-top: 90px;
+	margin-bottom: 45px;
+}
+
+#GraphicsCards {
+	margin-right: 10px;
+	margin-left: 50px;
+	margin-top: 90px;
+	margin-bottom: 45px;
+}
+
+#RAM {
+	margin-right: 10px;
+	margin-left: 50px;
+	margin-top: 90px;
+	margin-bottom: 45px;
+}
+
+#Motherboards {
+	margin-right: 10px;
+	margin-left: 50px;
+	margin-top: 90px;
+	margin-bottom: 45px;
+}
+
+#Processors {
+	margin-right: 10px;
+	margin-left: 50px;
+	margin-top: 90px;
+	margin-bottom: 45px;	
+}
+
+.images {
+	margin-top: 5px;
+	margin-left: 800px;
+}
+
+.vklogo {
+	width: 25px;
+	height: 25px;
+}
+
+.ytlogo {
+	width: 32px;
+	height: 25px;
+}
+
+.basket {
+	right: 4px;
+	height: 62px;
+	position: fixed;
+	width: 400px;
+	border: 2px solid black;
+	margin-top: 7px;
+	margin-bottom: 7px;
+	display: flex;
+	flex-direction: row;
+	background-color: white;
+
+}
+
+.basketlogo {
+	padding-right: 10px;
+	padding-left: 10px;
+	padding-top: 10px;
+	height: 45px;
+	width: 45px;
+}
+
+.info-switch {
+  display: none;
+}
+
+.basket-info {
+	margin-left: 20px;
+  max-height: 0;
+  overflow: hidden;
+  transition: 0.4s;
+}
+
+.info-switch:checked~.basket-info {
+  max-height: 100px;
+}
+
+.basket-text::before {
+  content: "";
+  position: absolute;
+  right: -15px;
+  top: 4px;
+  border: 6px solid black;
+  border-bottom-color: transparent;
+  border-right-color: transparent;
+  border-left-color: transparent;
+}
+
+.info-switch:checked~.basket-text::before {
+  transform: rotate(180deg) translateY(6px);
+}
+
+.basket-text {
+	margin-top: 10px;
+  position: relative;
+  margin-bottom: 0px;
+  user-select: none;
+  color: black;
+  cursor: pointer;
+  font-size: 20pt;
+}
+
+.basket:hover {
+	background: #FFAB73;
+	cursor: pointer;
+}
+
+a {
+	text-decoration: none;
+	color: black;
+}
+
+.btn1:hover {
+	background-color: #FFAB73;
+	border-color: #A64300;
+}
+
+.btn2:hover {
+	background-color: #FFAB73;
+	border-color: #A64300;
+}
+.body-top{
+	padding-top: 100px;
+}
+.op1-block {
+	
+	border-radius: 10px;
+	margin-left: 300px;
+	width: 1000px;
+	height: 220px;
+	border: 1px solid black;
+	box-shadow: 0 5px 5px black;
+	margin: 20px;
+	position: relative;
+}
+
+.op1 {
+	margin: 10px;
+	height: 200px;
+	width: 200px;
+}
+
+.op1-name {
+	padding-bottom: 20px;
+	position: absolute;
+  	top: 100px;
+  	left: 300px;
+}
+
+.op1-val {
+	position: absolute;
+  	top: 50px;
+  	left: 900px;
+}
+
+.op1-img {
+	background: url('img/basket.png') no-repeat center center;
+	background-size: 75%;
+	position: absolute;
+  	top: 80px;
+  	left: 885px;
+  	width: 50px;
+  	height: 50px;
+  	padding: 5px;
+  	border: 1px solid black;
+  	border-radius: 10px;
+}
+
+.op1-img:hover {
+	cursor: pointer;
+	background: url('img/basket-hover.png') no-repeat center center;
+	background-size: 75%;
+	animation: basket-anim 2s infinite ease-in-out alternate;
+
+}
+
+.op1-img:active {
+	cursor: pointer;
+	background: url('img/basket-active.png') no-repeat center center;
+	background-size: 75%;
+
+}
+
+.op2-block {
+	border-radius: 10px;
+	margin-left: 300px;
+	width: 1000px;
+	height: 220px;
+	border: 1px solid black;
+	box-shadow: 0 5px 5px black;
+	margin: 20px;
+	position: relative;
+}
+
+.op2 {
+	margin: 10px;
+	height: 200px;
+	width: 200px;
+}
+
+.op2-name {
+	padding-bottom: 20px;
+	position: absolute;
+  	top: 100px;
+  	left: 300px;
+}
+
+.op2-val {
+	position: absolute;
+  	top: 50px;
+  	left: 900px;
+}
+
+.op2-img {
+	background: url('img/basket.png') no-repeat center center;
+	background-size: 75%;
+	position: absolute;
+  	top: 80px;
+  	left: 885px;
+  	width: 50px;
+  	height: 50px;
+  	padding: 5px;
+  	border: 1px solid black;
+  	border-radius: 10px;
+}
+
+.op2-img:hover {
+	cursor: pointer;
+	background: url('img/basket-hover.png') no-repeat center center;
+	background-size: 75%;
+	animation: basket-anim 2s infinite ease-in-out alternate;
+
+}
+
+.op2-img:active {
+	cursor: pointer;
+	background: url('img/basket-active.png') no-repeat center center;
+	background-size: 75%;
+
+}
+
+.op3-block {
+	border-radius: 10px;
+	margin-left: 300px;
+	width: 1000px;
+	height: 220px;
+	border: 1px solid black;
+	box-shadow: 0 5px 5px black;
+	margin: 20px;
+	position: relative;
+}
+
+.op3 {
+	margin: 10px;
+	height: auto;
+	width: 200px;
+}
+
+.op3-name {
+	padding-bottom: 20px;
+	position: absolute;
+  	top: 100px;
+  	left: 300px;
+}
+
+.op3-val {
+	position: absolute;
+  	top: 50px;
+  	left: 900px;
+}
+
+.op3-img {
+	background: url('img/basket.png') no-repeat center center;
+	background-size: 75%;
+	position: absolute;
+  	top: 80px;
+  	left: 885px;
+  	width: 50px;
+  	height: 50px;
+  	padding: 5px;
+  	border: 1px solid black;
+  	border-radius: 10px;
+}
+
+.op3-img:hover {
+	cursor: pointer;
+	background: url('img/basket-hover.png') no-repeat center center;
+	background-size: 75%;
+	animation: basket-anim 2s infinite ease-in-out alternate;
+
+}
+
+.op3-img:active {
+	cursor: pointer;
+	background: url('img/basket-active.png') no-repeat center center;
+	background-size: 75%;
+
+}
+
+.op4-block {
+	border-radius: 10px;
+	margin-left: 300px;
+	width: 1000px;
+	height: 220px;
+	border: 1px solid black;
+	box-shadow: 0 5px 5px black;
+	margin: 20px;
+	position: relative;
+}
+
+.op4 {
+	margin: 10px;
+	height: 200px;
+	width: 200px;
+}
+
+.op4-name {
+	padding-bottom: 20px;
+	position: absolute;
+  	top: 100px;
+  	left: 300px;
+}
+
+.op4-val {
+	position: absolute;
+  	top: 50px;
+  	left: 900px;
+}
+
+.op4-img {
+	background: url('img/basket.png') no-repeat center center;
+	background-size: 75%;
+	position: absolute;
+  	top: 80px;
+  	left: 885px;
+  	width: 50px;
+  	height: 50px;
+  	padding: 5px;
+  	border: 1px solid black;
+  	border-radius: 10px;
+}
+
+.op4-img:hover {
+	cursor: pointer;
+	background: url('img/basket-hover.png') no-repeat center center;
+	background-size: 75%;
+	animation: basket-anim 2s infinite ease-in-out alternate;
+
+}
+
+.op4-img:active {
+	cursor: pointer;
+	background: url('img/basket-active.png') no-repeat center center;
+	background-size: 75%;
+
+}
+
+.GC1-block {
+	border-radius: 10px;
+	margin-left: 300px;
+	width: 1000px;
+	height: 220px;
+	border: 1px solid black;
+	box-shadow: 0 5px 5px black;
+	margin: 20px;
+	position: relative;
+}
+
+.GC1 {
+	margin: 10px;
+	height: 200px;
+	width: 200px;
+}
+
+.GC1-name {
+	padding-bottom: 20px;
+	position: absolute;
+  	top: 100px;
+  	left: 300px;
+}
+
+.GC1-val {
+	position: absolute;
+  	top: 50px;
+  	left: 900px;
+}
+
+.GC1-img {
+	background: url('img/basket.png') no-repeat center center;
+	background-size: 75%;
+	position: absolute;
+  	top: 80px;
+  	left: 885px;
+  	width: 50px;
+  	height: 50px;
+  	padding: 5px;
+  	border: 1px solid black;
+  	border-radius: 10px;
+}
+
+.GC1-img:hover {
+	cursor: pointer;
+	background: url('img/basket-hover.png') no-repeat center center;
+	background-size: 75%;
+	animation: basket-anim 2s infinite ease-in-out alternate;
+
+}
+
+.GC1-img:active {
+	cursor: pointer;
+	background: url('img/basket-active.png') no-repeat center center;
+	background-size: 75%;
+
+}
+
+.GC2-block {
+	border-radius: 10px;
+	margin-left: 300px;
+	width: 1000px;
+	height: 220px;
+	border: 1px solid black;
+	box-shadow: 0 5px 5px black;
+	margin: 20px;
+	position: relative;
+}
+
+.GC2 {
+	margin: 10px;
+	height: 200px;
+	width: 200px;
+}
+
+.GC2-name {
+	padding-bottom: 20px;
+	position: absolute;
+  	top: 100px;
+  	left: 300px;
+}
+
+.GC2-val {
+	position: absolute;
+  	top: 50px;
+  	left: 900px;
+}
+
+.GC2-img {
+	background: url('img/basket.png') no-repeat center center;
+	background-size: 75%;
+	position: absolute;
+  	top: 80px;
+  	left: 885px;
+  	width: 50px;
+  	height: 50px;
+  	padding: 5px;
+  	border: 1px solid black;
+  	border-radius: 10px;
+}
+
+.GC2-img:hover {
+	cursor: pointer;
+	background: url('img/basket-hover.png') no-repeat center center;
+	background-size: 75%;
+	animation: basket-anim 2s infinite ease-in-out alternate;
+
+}
+
+.GC2-img:active {
+	cursor: pointer;
+	background: url('img/basket-active.png') no-repeat center center;
+	background-size: 75%;
+
+}
+
+.GC3-block {
+	border-radius: 10px;
+	margin-left: 300px;
+	width: 1000px;
+	height: 220px;
+	border: 1px solid black;
+	box-shadow: 0 5px 5px black;
+	margin: 20px;
+	position: relative;
+}
+
+.GC3 {
+	margin: 10px;
+	height: 200px;
+	width: 200px;
+}
+
+.GC3-name {
+	padding-bottom: 20px;
+	position: absolute;
+  	top: 100px;
+  	left: 300px;
+}
+
+.GC3-val {
+	position: absolute;
+  	top: 50px;
+  	left: 900px;
+}
+
+.GC3-img {
+	background: url('img/basket.png') no-repeat center center;
+	background-size: 75%;
+	position: absolute;
+  	top: 80px;
+  	left: 885px;
+  	width: 50px;
+  	height: 50px;
+  	padding: 5px;
+  	border: 1px solid black;
+  	border-radius: 10px;
+}
+
+.GC3-img:hover {
+	cursor: pointer;
+	background: url('img/basket-hover.png') no-repeat center center;
+	background-size: 75%;
+	animation: basket-anim 2s infinite ease-in-out alternate;
+
+}
+
+.GC3-img:active {
+	cursor: pointer;
+	background: url('img/basket-active.png') no-repeat center center;
+	background-size: 75%;
+
+}
+
+.GC4-block {
+	border-radius: 10px;
+	margin-left: 300px;
+	width: 1000px;
+	height: 220px;
+	border: 1px solid black;
+	box-shadow: 0 5px 5px black;
+	margin: 20px;
+	position: relative;
+}
+
+.GC4 {
+	margin: 10px;
+	height: 200px;
+	width: 200px;
+}
+
+.GC4-name {
+	padding-bottom: 20px;
+	position: absolute;
+  	top: 100px;
+  	left: 300px;
+}
+
+.GC4-val {
+	position: absolute;
+  	top: 50px;
+  	left: 900px;
+}
+
+.GC4-img {
+	background: url('img/basket.png') no-repeat center center;
+	background-size: 75%;
+	position: absolute;
+  	top: 80px;
+  	left: 885px;
+  	width: 50px;
+  	height: 50px;
+  	padding: 5px;
+  	border: 1px solid black;
+  	border-radius: 10px;
+}
+
+.GC4-img:hover {
+	cursor: pointer;
+	background: url('img/basket-hover.png') no-repeat center center;
+	background-size: 75%;
+	animation: basket-anim 2s infinite ease-in-out alternate;
+
+}
+
+.GC4-img:active {
+	cursor: pointer;
+	background: url('img/basket-active.png') no-repeat center center;
+	background-size: 75%;
+
+}
+
+.MB1-block {
+	border-radius: 10px;
+	margin-left: 300px;
+	width: 1000px;
+	height: 220px;
+	border: 1px solid black;
+	box-shadow: 0 5px 5px black;
+	margin: 20px;
+	position: relative;
+}
+
+.MB1 {
+	margin: 10px;
+	height: 200px;
+	width: 200px;
+}
+
+.MB1-name {
+	padding-bottom: 20px;
+	position: absolute;
+  	top: 100px;
+  	left: 300px;
+}
+
+.MB1-val {
+	position: absolute;
+  	top: 50px;
+  	left: 900px;
+}
+
+.MB1-img {
+	background: url('img/basket.png') no-repeat center center;
+	background-size: 75%;
+	position: absolute;
+  	top: 80px;
+  	left: 885px;
+  	width: 50px;
+  	height: 50px;
+  	padding: 5px;
+  	border: 1px solid black;
+  	border-radius: 10px;
+}
+
+.MB1-img:hover {
+	cursor: pointer;
+	background: url('img/basket-hover.png') no-repeat center center;
+	background-size: 75%;
+	animation: basket-anim 2s infinite ease-in-out alternate;
+
+}
+
+.MB1-img:active {
+	cursor: pointer;
+	background: url('img/basket-active.png') no-repeat center center;
+	background-size: 75%;
+
+}
+
+.MB2-block {
+	border-radius: 10px;
+	margin-left: 300px;
+	width: 1000px;
+	height: 220px;
+	border: 1px solid black;
+	box-shadow: 0 5px 5px black;
+	margin: 20px;
+	position: relative;
+}
+
+.MB2 {
+	margin: 10px;
+	height: 200px;
+	width: 200px;
+}
+
+.MB2-name {
+	padding-bottom: 20px;
+	position: absolute;
+  	top: 100px;
+  	left: 300px;
+}
+
+.MB2-val {
+	position: absolute;
+  	top: 50px;
+  	left: 900px;
+}
+
+.MB2-img {
+	background: url('img/basket.png') no-repeat center center;
+	background-size: 75%;
+	position: absolute;
+  	top: 80px;
+  	left: 885px;
+  	width: 50px;
+  	height: 50px;
+  	padding: 5px;
+  	border: 1px solid black;
+  	border-radius: 10px;
+}
+
+.MB2-img:hover {
+	cursor: pointer;
+	background: url('img/basket-hover.png') no-repeat center center;
+	background-size: 75%;
+	animation: basket-anim 2s infinite ease-in-out alternate;
+
+}
+
+.MB2-img:active {
+	cursor: pointer;
+	background: url('img/basket-active.png') no-repeat center center;
+	background-size: 75%;
+
+}
+
+.MB3-block {
+	border-radius: 10px;
+	margin-left: 300px;
+	width: 1000px;
+	height: 220px;
+	border: 1px solid black;
+	box-shadow: 0 5px 5px black;
+	margin: 20px;
+	position: relative;
+}
+
+.MB3 {
+	margin: 10px;
+	height: 200px;
+	width: 200px;
+}
+
+.MB3-name {
+	padding-bottom: 20px;
+	position: absolute;
+  	top: 100px;
+  	left: 300px;
+}
+
+.MB3-val {
+	position: absolute;
+  	top: 50px;
+  	left: 900px;
+}
+
+.MB3-img {
+	background: url('img/basket.png') no-repeat center center;
+	background-size: 75%;
+	position: absolute;
+  	top: 80px;
+  	left: 885px;
+  	width: 50px;
+  	height: 50px;
+  	padding: 5px;
+  	border: 1px solid black;
+  	border-radius: 10px;
+}
+
+.MB3-img:hover {
+	cursor: pointer;
+	background: url('img/basket-hover.png') no-repeat center center;
+	background-size: 75%;
+	animation: basket-anim 2s infinite ease-in-out alternate;
+
+}
+
+.MB3-img:active {
+	cursor: pointer;
+	background: url('img/basket-active.png') no-repeat center center;
+	background-size: 75%;
+
+}
+
+.MB4-block {
+	border-radius: 10px;
+	margin-left: 300px;
+	width: 1000px;
+	height: 220px;
+	border: 1px solid black;
+	box-shadow: 0 5px 5px black;
+	margin: 20px;
+	position: relative;
+}
+
+.MB4 {
+	margin: 10px;
+	height: 200px;
+	width: 200px;
+}
+
+.MB4-name {
+	padding-bottom: 20px;
+	position: absolute;
+  	top: 100px;
+  	left: 300px;
+}
+
+.MB4-val {
+	position: absolute;
+  	top: 50px;
+  	left: 900px;
+}
+
+.MB4-img {
+	background: url('img/basket.png') no-repeat center center;
+	background-size: 75%;
+	position: absolute;
+  	top: 80px;
+  	left: 885px;
+  	width: 50px;
+  	height: 50px;
+  	padding: 5px;
+  	border: 1px solid black;
+  	border-radius: 10px;
+}
+
+.MB4-img:hover {
+	cursor: pointer;
+	background: url('img/basket-hover.png') no-repeat center center;
+	background-size: 75%;
+	animation: basket-anim 2s infinite ease-in-out alternate;
+
+}
+
+.MB4-img:active {
+	cursor: pointer;
+	background: url('img/basket-active.png') no-repeat center center;
+	background-size: 75%;
+
+}
+
+.PROC1-block {
+	border-radius: 10px;
+	margin-left: 300px;
+	width: 1000px;
+	height: 220px;
+	border: 1px solid black;
+	box-shadow: 0 5px 5px black;
+	margin: 20px;
+	position: relative;
+}
+
+.PROC1 {
+	margin: 10px;
+	height: 200px;
+	width: 200px;
+}
+
+.PROC1-name {
+	padding-bottom: 20px;
+	position: absolute;
+  	top: 100px;
+  	left: 300px;
+}
+
+.PROC1-val {
+	position: absolute;
+  	top: 50px;
+  	left: 900px;
+}
+
+.PROC1-img {
+	background: url('img/basket.png') no-repeat center center;
+	background-size: 75%;
+	position: absolute;
+  	top: 80px;
+  	left: 885px;
+  	width: 50px;
+  	height: 50px;
+  	padding: 5px;
+  	border: 1px solid black;
+  	border-radius: 10px;
+}
+
+.PROC1-img:hover {
+	cursor: pointer;
+	background: url('img/basket-hover.png') no-repeat center center;
+	background-size: 75%;
+	animation: basket-anim 2s infinite ease-in-out alternate;
+
+}
+
+.PROC1-img:active {
+	cursor: pointer;
+	background: url('img/basket-active.png') no-repeat center center;
+	background-size: 75%;
+
+}
+
+.PROC2-block {
+	border-radius: 10px;
+	margin-left: 300px;
+	width: 1000px;
+	height: 220px;
+	border: 1px solid black;
+	box-shadow: 0 5px 5px black;
+	margin: 20px;
+	position: relative;
+}
+
+.PROC2 {
+	margin: 10px;
+	height: 200px;
+	width: 200px;
+}
+
+.PROC2-name {
+	padding-bottom: 20px;
+	position: absolute;
+  	top: 100px;
+  	left: 300px;
+}
+
+.PROC2-val {
+	position: absolute;
+  	top: 50px;
+  	left: 900px;
+}
+
+.PROC2-img {
+	background: url('img/basket.png') no-repeat center center;
+	background-size: 75%;
+	position: absolute;
+  	top: 80px;
+  	left: 885px;
+  	width: 50px;
+  	height: 50px;
+  	padding: 5px;
+  	border: 1px solid black;
+  	border-radius: 10px;
+}
+
+.PROC2-img:hover {
+	cursor: pointer;
+	background: url('img/basket-hover.png') no-repeat center center;
+	background-size: 75%;
+	animation: basket-anim 2s infinite ease-in-out alternate;
+
+}
+
+.PROC2-img:active {
+	cursor: pointer;
+	background: url('img/basket-active.png') no-repeat center center;
+	background-size: 75%;
+
+}
+
+.PROC3-block {
+	border-radius: 10px;
+	margin-left: 300px;
+	width: 1000px;
+	height: 220px;
+	border: 1px solid black;
+	box-shadow: 0 5px 5px black;
+	margin: 20px;
+	position: relative;
+}
+
+.PROC3 {
+	margin: 10px;
+	height: 200px;
+	width: 200px;
+}
+
+.PROC3-name {
+	padding-bottom: 20px;
+	position: absolute;
+  	top: 100px;
+  	left: 300px;
+}
+
+.PROC3-val {
+	position: absolute;
+  	top: 50px;
+  	left: 900px;
+}
+
+.PROC3-img {
+	background: url('img/basket.png') no-repeat center center;
+	background-size: 75%;
+	position: absolute;
+  	top: 80px;
+  	left: 885px;
+  	width: 50px;
+  	height: 50px;
+  	padding: 5px;
+  	border: 1px solid black;
+  	border-radius: 10px;
+}
+
+.PROC3-img:hover {
+	cursor: pointer;
+	background: url('img/basket-hover.png') no-repeat center center;
+	background-size: 75%;
+	animation: basket-anim 2s infinite ease-in-out alternate;
+
+}
+
+.PROC3-img:active {
+	cursor: pointer;
+	background: url('img/basket-active.png') no-repeat center center;
+	background-size: 75%;
+
+}
+
+.PROC4-block {
+	border-radius: 10px;
+	margin-left: 300px;
+	width: 1000px;
+	height: 220px;
+	border: 1px solid black;
+	box-shadow: 0 5px 5px black;
+	margin: 20px;
+	position: relative;
+}
+
+.PROC4 {
+	margin: 10px;
+	height: 200px;
+	width: 200px;
+}
+
+.PROC4-name {
+	padding-bottom: 20px;
+	position: absolute;
+  	top: 100px;
+  	left: 300px;
+}
+
+.PROC4-val {
+	position: absolute;
+  	top: 50px;
+  	left: 900px;
+}
+
+.PROC4-img {
+	background: url('img/basket.png') no-repeat center center;
+	background-size: 75%;
+	position: absolute;
+  	top: 80px;
+  	left: 885px;
+  	width: 50px;
+  	height: 50px;
+  	padding: 5px;
+  	border: 1px solid black;
+  	border-radius: 10px;
+}
+
+.PROC4-img:hover {
+	cursor: pointer;
+	background: url('img/basket-hover.png') no-repeat center center;
+	background-size: 75%;
+}
+
+.PROC4-img:active {
+	cursor: pointer;
+	background: url('img/basket-active.png') no-repeat center center;
+	background-size: 75%;
+
+}
+
+.OpMain{
+	color: white;
+}
+
+.OpGr{
+	color: white;
+}
+
+.OpMoth{
+	color: white;
+}
+
+.OpProc{
+	color: white;
+}
+
+.OpRAM{
+	color: white;
+}
+
+.OpMain:hover {
+	cursor: pointer;
+	color: #FF9640;
+}
+
+.OpGr:hover {
+	cursor: pointer;
+	color: #FF9640;
+}
+
+.OpMoth:hover {
+	cursor: pointer;
+	color: #FF9640;
+}
+
+.OpProc:hover {
+	cursor: pointer;
+	color: #FF9640;
+}
+
+.OpRAM:hover {
+	cursor: pointer;
+	color: #FF9640;
+}
+
+.OpMain:active {
+	color: blanchedalmond;
+}
+
+.OpGr:active {
+	color: blanchedalmond;
+}
+
+.OpMoth:active {
+	color: blanchedalmond;
+}
+
+.OpProc:active {
+	color: blanchedalmond;
+}
+
+.OpRAM:active {
+	color: blanchedalmond;
+}
+
+.bgimg {
+	top: 0px;
+	left: 0px;
+	position: absolute;
+	height: 47px;
+	width: 45px;
+	border-radius: 12px;
+}
+
+.bgIMG {
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	border-radius: 12px;
+    content: url('img/pngegg.png');
+    appearance: none;
+    display: block;
+    width: 45px;
+    height: 48px;
+}
+
+.bgIMG:checked {
+    content: url('img/mark.jpg');
+}
+

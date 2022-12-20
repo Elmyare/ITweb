@@ -1,0 +1,31 @@
+.surname {line-height: 0.2;}
+.stix {line-height: 0.2;}
+
+body {margin-left: 5em;
+	 margin-right: 2em;}
+
+.ex3 {background-color: lightgrey;
+	margin-left: 20em;
+	margin-right: 20em;}
+
+.hist {color: darkblue;}
+
+h1 {font-family: arial;
+	}
+
+.t1 { color: darkblue;
+        margin-left: 10pt;}
+
+.t2 { margin-top: -45pt;
+        margin-left: 5pt;
+        color: blue;}
+
+.history {
+	border-right: 5px double blue;
+	line-height: 1.5;
+		margin-left: 5em;
+	margin-right: 2em;
+	background-color: white;}
+a {color: green;}
+
+a:hover{color: blue;}
