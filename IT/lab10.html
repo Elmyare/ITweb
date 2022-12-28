@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        main > div:not(:first-child) {
+            margin-top: 10px;
+        }
+
+        .reg > input {
+            display: block;
+        }
+
+        .reg > input:last-child {
+            margin-top: 10px;
+        }
+
+        .hide__reg {
+            display: none;
+        }
+
+    </style>
+</head>
+<body onload="PageLoad()">
+    <main>
+        <h1>Cookie</h1>
+        <div class="hello">Welcome <span id="name">?</span></div>
+        <div class="text__counter">visit counter: <span id="counter">0</span></div>
+        <div class="visit__time">last visit was: <span id="time">first visit</span></div>
+        <div class="reg">
+            <input type="text" name="reg" id="reg__name">
+            <input onclick="SetName()" type="button" value="register">
+            <input onclick="ResetCounter()" type="button" value="clear visit count">
+        </div>
+        <div class="hide__reg" id="hide__reg">
+            <input type="text" name="reg" id="reg__name__sec">
+            <input type="text" name="reg_s" id="reg__surname">
+            <input type="text" name="reg_n" id="reg__number">
+            <input onclick="SetCookie()" type="button" value="register">
+        </div>
+    </main>
+</body>
+<script>
+
+    let date = new Date();
+    const cookie_user_name = "asd_name";
+    const cookie_visit_count = "asd_counter";
+    const cookie_visit_date = "asd_date";
+    let end;
+
+    let reg_name = document.getElementById("reg__name");
+    let time_field = document.getElementById("time");
+    let name_filed = document.getElementById("name");
+    let counter_filed = document.getElementById("counter");
+
+    function GetCookie(offset) {
+        end = document.cookie.indexOf(";", offset)
+        if (end == -1) end = document.cookie.length
+        return unescape(document.cookie.substring(offset, end))
+    }
+
+    function PageLoad() {
+        let why_search = [cookie_visit_date + "=", cookie_user_name + "=", cookie_visit_count + "="];
+        let where_write = [time_field, name_filed, counter_filed];
+        if (document.cookie.length > 0) {
+            for (let index = 0; index < why_search.length; index++) {
+                let offset = document.cookie.indexOf(why_search[index]);
+                if (offset != -1) {
+                    offset += why_search[index].length;
+                    where_write[index].innerHTML = GetCookie(offset);
+                }
+            }
+        }
+
+        let month_tmp = date.getMonth() + 1;
+        let time_str = month_tmp.toString() + "-" + date.getDate().toString() + "-" + date.getHours().toString() + "-" + date.getMinutes().toString() + "-" + date.getSeconds().toString();
+        document.cookie = why_search[0] + time_str;
+        let offset = document.cookie.indexOf(why_search[2]);
+        if (offset != -1) {
+            offset += why_search[2].length
+            let counter = Number(GetCookie(offset));
+            counter++;
+            counter = String(counter);
+            document.cookie = why_search[2] + counter;
+        } else {
+            document.cookie = why_search[2] + "0";
+        }
+        console.log(document.cookie);
+    }
+
+    function ResetCounter() {
+        let search = cookie_visit_count + "=";
+        if (document.cookie.length > 0) {
+            if (document.cookie.indexOf(search) != -1) {
+                document.cookie = search + "0";
+            }
+        }   
+    }
+
+    let reg_surname = document.getElementById("reg__surname");
+    let reg_num = document.getElementById("reg__number");
+    let reg_name_sec = document.getElementById("reg__name__sec");
+    let reg_hide = document.getElementById("hide__reg");
+
+    function SetName() {
+        document.cookie = cookie_user_name + "=" + escape(reg_name.value);
+        reg_hide.style.display = "block";
+        reg_name_sec.value = reg_name.value;
+    }
+
+    function SetCookie() {
+        document.cookie = "asd_name_sec=" + reg_name_sec.value;
+        document.cookie = "asd_surname=" + reg_surname.value;
+        document.cookie = "asd_num=" + reg_num.value;
+        console.log(document.cookie);
+    }
+
+</script>
+</html>

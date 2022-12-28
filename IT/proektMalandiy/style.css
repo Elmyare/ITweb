@@ -1,0 +1,69 @@
+body {
+background-color: #232323;
+color: #e2be2c;
+}
+a:link {
+font-family: calibri;
+color: #e2be2c;
+text-decoration: none;
+}
+a:visited {
+color: #e2be2c;
+
+}
+a:active {
+color: #5bff00;
+text-decoration: none;
+}
+a.selected {
+color: #5bff00;
+}
+a.istochnik:link {
+text-decoration: underline;
+color: #049120;
+}
+p {font-family: calibri;
+text-indent: 0px;
+}
+dt {font-family: calibri;
+text-indent: 0px;
+}
+dd {font-family: calibri;
+text-indent: 0px;
+}
+p.redstroke {
+font-family: calibri;
+text-indent: 50px;
+}
+h1 {font-family: calibri;
+}
+h2 {font-family: calibri;
+}
+h3 {font-family: calibri;
+}
+td {
+vertical-align: top;
+}
+td.centeralign {
+vertical-align: middle;
+}
+img {
+border-style: none
+}
+.scale {
+transition: 0.5s;
+}
+.scale:hover {
+transform: scale(1.2);
+}
+.scale2 {
+    display: block;
+    width: 100px;
+    height: 100px;
+    transition: width 0.5s, height 0.5s, transform 0.5s;
+}
+
+.scale2:hover {
+    width: 400px;
+    height: 400px;
+}
